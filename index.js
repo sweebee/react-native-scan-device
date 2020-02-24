@@ -2,25 +2,24 @@ import { NativeModules, NativeEventEmitter } from 'react-native';
 
 const { ScanDevice } = NativeModules;
 
-class SubscriptionWrapper
-{
-    constructor(subscription) {
-        this.subscription = subscription;
-    }
-
-    offReceive() {
-        this.subscription.remove();
-    }
-}
+/**
+ * @callback ScanDeviceWrapper~scanBroadcastCallback
+ * @param {Object} event (prop) {string} data
+ */
 
 class ScanDeviceWrapper
 {
-    constructor() {console.log('constructed')}
-
+    /**
+     * Subscribes to the Scanner's native broadcast event with a callback
+     * 
+     * @param {ScanDeviceWrapper~scanBroadcastCallback} callback 
+     * 
+     * @returns EmitterSubscription
+     */
     onReceive(callback) {
         const eventEmitter = new NativeEventEmitter(NativeModules.ScanDevice);
         const subscription = eventEmitter.addListener('scan/received', callback);
-        return new SubscriptionWrapper(subscription);
+        return subscription;
     }
 }
 
