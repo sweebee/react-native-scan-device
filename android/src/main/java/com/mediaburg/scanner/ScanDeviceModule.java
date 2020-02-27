@@ -13,6 +13,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.util.Log;
 
 import android.device.ScanDevice;
 
@@ -53,9 +54,13 @@ public class ScanDeviceModule extends ReactContextBaseJavaModule implements Life
 
     @Override
     public void initialize() {
-        sm = new ScanDevice();
-        sm.setOutScanMode(0);
-        sm.openScan();
+        try {
+            sm = new ScanDevice();
+            sm.setOutScanMode(0);
+            sm.openScan();
+        } catch (Exception e) {
+            Log.e("SCAN_DEVICE", "This is not a compatible scan device");
+        }
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(SCAN_ACTION);
