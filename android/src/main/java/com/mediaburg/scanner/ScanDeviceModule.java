@@ -97,4 +97,13 @@ public class ScanDeviceModule extends ReactContextBaseJavaModule implements Life
             .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
             .emit(eventName, params);
     }
+
+    @ReactMethod
+    public void startScan() {
+        sm.startScan();
+    }
+    @ReactMethod
+    public void stopScan() {
+        sm.stopScan();
+    }
 }

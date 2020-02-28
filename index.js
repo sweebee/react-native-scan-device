@@ -21,6 +21,20 @@ class ScanDeviceWrapper
         const subscription = eventEmitter.addListener('scan/received', callback);
         return subscription;
     }
+
+    /**
+     * Starts the scanner
+     */
+    startScan() {
+        ScanDevice.startScan();
+    }
+
+    /**
+     * Stops the scanner
+     */
+    stopScan() {
+        ScanDevice.stopScan();
+    }
 }
 
 export default new ScanDeviceWrapper();
