@@ -3,8 +3,11 @@
 This module allows you to listen for scan events emitted by Honeywell NXXX scanners on Android devices.
 
 ## Getting started
+From npm\
+`$ npm install --save react-native-scan-device`
 
-`$ yarn add git+https://github.com/mediaburg/react-native-scan-device`
+From GitHub\
+`$ npm install --save git+https://github.com/mediaburg/react-native-scan-device`
 
 ### Installation / Linking
 Linking is done automatically in react-native 0.60+
