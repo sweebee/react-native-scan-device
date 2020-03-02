@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/github.com/mediaburg/react-native-scan-device"
   s.license      = "MIT"
   # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.authors      = { "MediaBurg" => "yourname@email.com" }
+  s.authors      = { "MediaBurg" => "info@mediaburg.ch" }
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/github.com/mediaburg/react-native-scan-device.git", :tag => "#{s.version}" }
 

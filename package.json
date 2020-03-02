@@ -4,9 +4,7 @@
   "version": "1.0.0",
   "description": "ScanSDK implementation for Honeywell NXXX",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/github.com/mediaburg/react-native-scan-device.git",
@@ -17,7 +15,7 @@
   ],
   "author": {
     "name": "MediaBurg",
-    "email": "yourname@email.com"
+    "url": "https://www.mediaburg.ch"
   },
   "license": "MIT",
   "licenseFilename": "LICENSE",
